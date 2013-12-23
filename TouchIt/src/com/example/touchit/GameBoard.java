@@ -32,8 +32,8 @@ public class GameBoard extends SurfaceView implements Runnable,OnTouchListener{
 	int counts;	
 	int count;
 	int touches = 0;
-	int x,xx,x1 = 0;
-	int y,yy,y1 = 0;
+	int x,xx = 0;
+	int y,yy = 0;
 	
 	public GameBoard(Context context) {
 		super(context);
@@ -86,8 +86,6 @@ public class GameBoard extends SurfaceView implements Runnable,OnTouchListener{
 		rnd	= new Random(Calendar.getInstance().getTimeInMillis());
 		x = rnd.nextInt(getWidth() - ball.getWidth());
 		y = rnd.nextInt(getHeight()- ball.getHeight());
-		//x1 = rnd.nextInt(getWidth() - ball.getWidth());
-		//y1 = rnd.nextInt(getHeight()- ball.getHeight());
 	}
 
 	public void touchCounter(){
